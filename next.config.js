@@ -1,7 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-}
+const debug = process.env.NODE_ENV !== "production";
 
-module.exports = nextConfig
+module.exports = {
+  basePath: !debug ? "/hyper" : "",
+  basePath: !debug ? "/hyper" : "",
+};
