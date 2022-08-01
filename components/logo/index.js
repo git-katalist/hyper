@@ -29,7 +29,7 @@ const Logo = () => {
   return (
     <LogoWrapper>
       <LogoImg>
-        <img src="/logo.png" alt="Greenland logo" />
+        <img src={`${prefix}/logo.png`} alt="Greenland logo" />
       </LogoImg>
       <LogoText>GreenLand</LogoText>
     </LogoWrapper>
