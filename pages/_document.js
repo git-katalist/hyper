@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
+import { prefix } from "utils/prefix";
 
 export default class MyDocument extends Document {
   //--------------For styled-components only------------//
@@ -32,7 +33,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head></Head>
+        <Head>
+          <link rel="icon" href={`${prefix}/favicon.ico"`} />
+        </Head>
         <body>
           <Main />
           <NextScript />
