@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 
 const NavLinksContainer = styled.div`
   display: none;
@@ -36,7 +37,7 @@ const LinkItem = styled.li`
   }
 `;
 
-const Link = styled.a`
+const MenuLink = styled.a`
   text-decoration: none;
   color: inherit;
   font-size: inherit;
@@ -50,16 +51,24 @@ const NavLinks = () => {
     <NavLinksContainer>
       <LinksWrapper>
         <LinkItem>
-          <Link href="/">Home</Link>
+          <Link href="/">
+            <MenuLink>Home</MenuLink>
+          </Link>
         </LinkItem>
         <LinkItem>
-          <Link href="/about">About</Link>
+          <Link href="/about">
+            <MenuLink>About</MenuLink>
+          </Link>
         </LinkItem>
         <LinkItem>
-          <Link href="/">Products</Link>
+          <Link href="/">
+            <MenuLink>Products</MenuLink>
+          </Link>
         </LinkItem>
         <LinkItem>
-          <Link href="/">Contact</Link>
+          <Link href="/">
+            <MenuLink>Contact</MenuLink>
+          </Link>
         </LinkItem>
       </LinksWrapper>
     </NavLinksContainer>

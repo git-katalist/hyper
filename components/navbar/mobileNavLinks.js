@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import Accessibility from "./accessibility";
 import { MenuToggle } from "./menuToggle";
@@ -46,7 +47,7 @@ const LinkItem = styled.li`
   }
 `;
 
-const Link = styled.a`
+const MenuLink = styled.a`
   text-decoration: none;
   color: inherit;
   font-size: inherit;
@@ -64,16 +65,24 @@ const MobileNavLinks = () => {
       {isOpen && (
         <LinksWrapper>
           <LinkItem>
-            <Link href="/">Home</Link>
+            <Link href="/">
+              <MenuLink onClick={() => setOpen(!isOpen)}>Home</MenuLink>
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link href="/about">About</Link>
+            <Link href="/about">
+              <MenuLink onClick={() => setOpen(!isOpen)}>About</MenuLink>
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link href="/">Products</Link>
+            <Link href="/">
+              <MenuLink onClick={() => setOpen(!isOpen)}>Products</MenuLink>
+            </Link>
           </LinkItem>
           <LinkItem>
-            <Link href="/">Contact</Link>
+            <Link href="/">
+              <MenuLink onClick={() => setOpen(!isOpen)}>Contact</MenuLink>
+            </Link>
           </LinkItem>
           <Accessibility />
         </LinksWrapper>
