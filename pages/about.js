@@ -1,7 +1,7 @@
-import React from "react";
+import styles from "../styles/Home.module.css";
 
 const about = () => {
-  return <div>about</div>;
+  return <div className={styles.container}>about</div>;
 };
 
 export default about;
